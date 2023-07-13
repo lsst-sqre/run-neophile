@@ -43,19 +43,19 @@ runs:
       if: ${{ inputs.mode }} == "check"
       shell: bash
       working-directory: ${{ inputs.working-directory }}
-      run: neophile check ${{ inputs.targets }}
+      run: neophile check ${{ inputs.types }}
 
     - name: Run neophile update
       if: ${{ inputs.mode }} == "update"
       shell: bash
       working-directory: ${{ inputs.working-directory }}
-      run: neophile update ${{ inputs.targets }}
+      run: neophile update ${{ inputs.types }}
 
     - name: Run neophile update --pr
       if: ${{ inputs.mode }} == "pr"
       shell: bash
       working-directory: ${{ inputs.working-directory }}
-      run: neophile update --pr ${{ inputs.targets }}
+      run: neophile update --pr ${{ inputs.types }}
       env:
         NEOPHILE_GITHUB_APP_ID: ${{ inputs.app-id }}
         NEOPHILE_GITHUB_PRIVATE_KEY: ${{ inputs.app-secret }}
