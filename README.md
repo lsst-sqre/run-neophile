@@ -99,7 +99,7 @@ jobs:
 
 - `python-version` (string, required): The Python version.
 - `mode` (string, required): The mode of operation chosen from `check`, `update`, or `pr`
-- `types` (string, optional): Limit neophile's operation to these space-separated dependency types (default: all supported types)
+- `types` (string, optional): Limit neophile's operation to these space-separated dependency types, chosen from `pre-commit` and `python` (default: all supported types)
 - `working-directory` (string, optional): Directory to run in (default: repository root)
 - `app-id` (string, optional, required if mode is `pr`): GitHub App id to run neophile as, needed for creating PRs
 - `app-secret` (string, optional, required if mode is `pr`): GitHub App private key, needed for creating PRs
